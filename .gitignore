@@ -1,0 +1,3 @@
+hosts
+ansible.cfg
+docker-compose.yaml

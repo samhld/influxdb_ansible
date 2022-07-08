@@ -1,0 +1,8 @@
+---
+- name: "Deploy InfluxDB"
+  hosts: all
+  tasks:
+    - name: "Ensure InfluxDB is installed"
+      apt:
+        name: influxdb
+        state: present
