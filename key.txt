@@ -1,0 +1,2088 @@
+{
+    "custom_stats": {},
+    "global_custom_stats": {},
+    "plays": [
+        {
+            "play": {
+                "duration": {
+                    "end": "2022-07-22T16:54:11.811260Z",
+                    "start": "2022-07-22T16:54:05.898554Z"
+                },
+                "id": "367dda89-d9b6-db4e-503a-000000000006",
+                "name": "Create infrastructure"
+            },
+            "tasks": [
+                {
+                    "hosts": {
+                        "localhost": {
+                            "_ansible_no_log": null,
+                            "action": "ec2_instance",
+                            "changed": true,
+                            "instance_ids": [
+                                "i-023e070af3520de99",
+                                "i-058a69235486e046c",
+                                "i-0a6ae4e55a3f9b98e",
+                                "i-0c3285af1a10f1df0",
+                                "i-03a92b61f2de36193"
+                            ],
+                            "instances": [
+                                {
+                                    "ami_launch_index": 4,
+                                    "architecture": "x86_64",
+                                    "block_device_mappings": [
+                                        {
+                                            "device_name": "/dev/sda1",
+                                            "ebs": {
+                                                "attach_time": "2022-07-22T16:54:10+00:00",
+                                                "delete_on_termination": true,
+                                                "status": "attaching",
+                                                "volume_id": "vol-08111c592048805cd"
+                                            }
+                                        }
+                                    ],
+                                    "capacity_reservation_specification": {
+                                        "capacity_reservation_preference": "open"
+                                    },
+                                    "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                    "cpu_options": {
+                                        "core_count": 2,
+                                        "threads_per_core": 1
+                                    },
+                                    "ebs_optimized": false,
+                                    "ena_support": true,
+                                    "enclave_options": {
+                                        "enabled": false
+                                    },
+                                    "hibernation_options": {
+                                        "configured": false
+                                    },
+                                    "hypervisor": "xen",
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_id": "i-058a69235486e046c",
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_time": "2022-07-22T16:54:09+00:00",
+                                    "maintenance_options": {
+                                        "auto_recovery": "default"
+                                    },
+                                    "metadata_options": {
+                                        "http_endpoint": "enabled",
+                                        "http_protocol_ipv6": "disabled",
+                                        "http_put_response_hop_limit": 1,
+                                        "http_tokens": "optional",
+                                        "instance_metadata_tags": "disabled",
+                                        "state": "pending"
+                                    },
+                                    "monitoring": {
+                                        "state": "disabled"
+                                    },
+                                    "network_interfaces": [
+                                        {
+                                            "attachment": {
+                                                "attach_time": "2022-07-22T16:54:09+00:00",
+                                                "attachment_id": "eni-attach-0eacc267ca29e8a04",
+                                                "delete_on_termination": true,
+                                                "device_index": 0,
+                                                "network_card_index": 0,
+                                                "status": "attaching"
+                                            },
+                                            "description": "",
+                                            "groups": [
+                                                {
+                                                    "group_id": "sg-0ff347a758f3161f0",
+                                                    "group_name": "default"
+                                                }
+                                            ],
+                                            "interface_type": "interface",
+                                            "ipv6_addresses": [],
+                                            "mac_address": "02:2c:75:cd:c8:63",
+                                            "network_interface_id": "eni-087c5d251fc22b708",
+                                            "owner_id": "752401886767",
+                                            "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                            "private_ip_address": "172.31.1.94",
+                                            "private_ip_addresses": [
+                                                {
+                                                    "primary": true,
+                                                    "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                                    "private_ip_address": "172.31.1.94"
+                                                }
+                                            ],
+                                            "source_dest_check": true,
+                                            "status": "in-use",
+                                            "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                            "vpc_id": "vpc-025d17e1899cc0a17"
+                                        }
+                                    ],
+                                    "placement": {
+                                        "availability_zone": "us-east-1a",
+                                        "group_name": "",
+                                        "tenancy": "default"
+                                    },
+                                    "platform_details": "Linux/UNIX",
+                                    "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                    "private_dns_name_options": {
+                                        "enable_resource_name_dns_a_record": false,
+                                        "enable_resource_name_dns_aaaa_record": false,
+                                        "hostname_type": "ip-name"
+                                    },
+                                    "private_ip_address": "172.31.1.94",
+                                    "product_codes": [],
+                                    "public_dns_name": "",
+                                    "root_device_name": "/dev/sda1",
+                                    "root_device_type": "ebs",
+                                    "security_groups": [
+                                        {
+                                            "group_id": "sg-0ff347a758f3161f0",
+                                            "group_name": "default"
+                                        }
+                                    ],
+                                    "source_dest_check": true,
+                                    "state": {
+                                        "code": 0,
+                                        "name": "pending"
+                                    },
+                                    "state_transition_reason": "",
+                                    "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "usage_operation": "RunInstances",
+                                    "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                    "virtualization_type": "hvm",
+                                    "vpc_id": "vpc-025d17e1899cc0a17"
+                                },
+                                {
+                                    "ami_launch_index": 2,
+                                    "architecture": "x86_64",
+                                    "block_device_mappings": [
+                                        {
+                                            "device_name": "/dev/sda1",
+                                            "ebs": {
+                                                "attach_time": "2022-07-22T16:54:10+00:00",
+                                                "delete_on_termination": true,
+                                                "status": "attaching",
+                                                "volume_id": "vol-0b0d5c6c85887368e"
+                                            }
+                                        }
+                                    ],
+                                    "capacity_reservation_specification": {
+                                        "capacity_reservation_preference": "open"
+                                    },
+                                    "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                    "cpu_options": {
+                                        "core_count": 2,
+                                        "threads_per_core": 1
+                                    },
+                                    "ebs_optimized": false,
+                                    "ena_support": true,
+                                    "enclave_options": {
+                                        "enabled": false
+                                    },
+                                    "hibernation_options": {
+                                        "configured": false
+                                    },
+                                    "hypervisor": "xen",
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_id": "i-0a6ae4e55a3f9b98e",
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_time": "2022-07-22T16:54:09+00:00",
+                                    "maintenance_options": {
+                                        "auto_recovery": "default"
+                                    },
+                                    "metadata_options": {
+                                        "http_endpoint": "enabled",
+                                        "http_protocol_ipv6": "disabled",
+                                        "http_put_response_hop_limit": 1,
+                                        "http_tokens": "optional",
+                                        "instance_metadata_tags": "disabled",
+                                        "state": "pending"
+                                    },
+                                    "monitoring": {
+                                        "state": "disabled"
+                                    },
+                                    "network_interfaces": [
+                                        {
+                                            "attachment": {
+                                                "attach_time": "2022-07-22T16:54:09+00:00",
+                                                "attachment_id": "eni-attach-0ec2c69bb7d25f5d5",
+                                                "delete_on_termination": true,
+                                                "device_index": 0,
+                                                "network_card_index": 0,
+                                                "status": "attaching"
+                                            },
+                                            "description": "",
+                                            "groups": [
+                                                {
+                                                    "group_id": "sg-0ff347a758f3161f0",
+                                                    "group_name": "default"
+                                                }
+                                            ],
+                                            "interface_type": "interface",
+                                            "ipv6_addresses": [],
+                                            "mac_address": "02:d3:f7:72:cd:35",
+                                            "network_interface_id": "eni-0ff0873301edd0de7",
+                                            "owner_id": "752401886767",
+                                            "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                            "private_ip_address": "172.31.9.231",
+                                            "private_ip_addresses": [
+                                                {
+                                                    "primary": true,
+                                                    "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                                    "private_ip_address": "172.31.9.231"
+                                                }
+                                            ],
+                                            "source_dest_check": true,
+                                            "status": "in-use",
+                                            "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                            "vpc_id": "vpc-025d17e1899cc0a17"
+                                        }
+                                    ],
+                                    "placement": {
+                                        "availability_zone": "us-east-1a",
+                                        "group_name": "",
+                                        "tenancy": "default"
+                                    },
+                                    "platform_details": "Linux/UNIX",
+                                    "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                    "private_dns_name_options": {
+                                        "enable_resource_name_dns_a_record": false,
+                                        "enable_resource_name_dns_aaaa_record": false,
+                                        "hostname_type": "ip-name"
+                                    },
+                                    "private_ip_address": "172.31.9.231",
+                                    "product_codes": [],
+                                    "public_dns_name": "",
+                                    "root_device_name": "/dev/sda1",
+                                    "root_device_type": "ebs",
+                                    "security_groups": [
+                                        {
+                                            "group_id": "sg-0ff347a758f3161f0",
+                                            "group_name": "default"
+                                        }
+                                    ],
+                                    "source_dest_check": true,
+                                    "state": {
+                                        "code": 0,
+                                        "name": "pending"
+                                    },
+                                    "state_transition_reason": "",
+                                    "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "usage_operation": "RunInstances",
+                                    "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                    "virtualization_type": "hvm",
+                                    "vpc_id": "vpc-025d17e1899cc0a17"
+                                },
+                                {
+                                    "ami_launch_index": 3,
+                                    "architecture": "x86_64",
+                                    "block_device_mappings": [
+                                        {
+                                            "device_name": "/dev/sda1",
+                                            "ebs": {
+                                                "attach_time": "2022-07-22T16:54:10+00:00",
+                                                "delete_on_termination": true,
+                                                "status": "attaching",
+                                                "volume_id": "vol-014f1ac4c06c3ec41"
+                                            }
+                                        }
+                                    ],
+                                    "capacity_reservation_specification": {
+                                        "capacity_reservation_preference": "open"
+                                    },
+                                    "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                    "cpu_options": {
+                                        "core_count": 2,
+                                        "threads_per_core": 1
+                                    },
+                                    "ebs_optimized": false,
+                                    "ena_support": true,
+                                    "enclave_options": {
+                                        "enabled": false
+                                    },
+                                    "hibernation_options": {
+                                        "configured": false
+                                    },
+                                    "hypervisor": "xen",
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_id": "i-0c3285af1a10f1df0",
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_time": "2022-07-22T16:54:09+00:00",
+                                    "maintenance_options": {
+                                        "auto_recovery": "default"
+                                    },
+                                    "metadata_options": {
+                                        "http_endpoint": "enabled",
+                                        "http_protocol_ipv6": "disabled",
+                                        "http_put_response_hop_limit": 1,
+                                        "http_tokens": "optional",
+                                        "instance_metadata_tags": "disabled",
+                                        "state": "pending"
+                                    },
+                                    "monitoring": {
+                                        "state": "disabled"
+                                    },
+                                    "network_interfaces": [
+                                        {
+                                            "attachment": {
+                                                "attach_time": "2022-07-22T16:54:09+00:00",
+                                                "attachment_id": "eni-attach-007389194cb94f9d6",
+                                                "delete_on_termination": true,
+                                                "device_index": 0,
+                                                "network_card_index": 0,
+                                                "status": "attaching"
+                                            },
+                                            "description": "",
+                                            "groups": [
+                                                {
+                                                    "group_id": "sg-0ff347a758f3161f0",
+                                                    "group_name": "default"
+                                                }
+                                            ],
+                                            "interface_type": "interface",
+                                            "ipv6_addresses": [],
+                                            "mac_address": "02:e9:d5:fb:31:01",
+                                            "network_interface_id": "eni-0cd6263d1462f268d",
+                                            "owner_id": "752401886767",
+                                            "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                            "private_ip_address": "172.31.6.185",
+                                            "private_ip_addresses": [
+                                                {
+                                                    "primary": true,
+                                                    "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                                    "private_ip_address": "172.31.6.185"
+                                                }
+                                            ],
+                                            "source_dest_check": true,
+                                            "status": "in-use",
+                                            "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                            "vpc_id": "vpc-025d17e1899cc0a17"
+                                        }
+                                    ],
+                                    "placement": {
+                                        "availability_zone": "us-east-1a",
+                                        "group_name": "",
+                                        "tenancy": "default"
+                                    },
+                                    "platform_details": "Linux/UNIX",
+                                    "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                    "private_dns_name_options": {
+                                        "enable_resource_name_dns_a_record": false,
+                                        "enable_resource_name_dns_aaaa_record": false,
+                                        "hostname_type": "ip-name"
+                                    },
+                                    "private_ip_address": "172.31.6.185",
+                                    "product_codes": [],
+                                    "public_dns_name": "",
+                                    "root_device_name": "/dev/sda1",
+                                    "root_device_type": "ebs",
+                                    "security_groups": [
+                                        {
+                                            "group_id": "sg-0ff347a758f3161f0",
+                                            "group_name": "default"
+                                        }
+                                    ],
+                                    "source_dest_check": true,
+                                    "state": {
+                                        "code": 0,
+                                        "name": "pending"
+                                    },
+                                    "state_transition_reason": "",
+                                    "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "usage_operation": "RunInstances",
+                                    "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                    "virtualization_type": "hvm",
+                                    "vpc_id": "vpc-025d17e1899cc0a17"
+                                },
+                                {
+                                    "ami_launch_index": 0,
+                                    "architecture": "x86_64",
+                                    "block_device_mappings": [
+                                        {
+                                            "device_name": "/dev/sda1",
+                                            "ebs": {
+                                                "attach_time": "2022-07-22T16:54:10+00:00",
+                                                "delete_on_termination": true,
+                                                "status": "attaching",
+                                                "volume_id": "vol-0c0be146d253802bb"
+                                            }
+                                        }
+                                    ],
+                                    "capacity_reservation_specification": {
+                                        "capacity_reservation_preference": "open"
+                                    },
+                                    "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                    "cpu_options": {
+                                        "core_count": 2,
+                                        "threads_per_core": 1
+                                    },
+                                    "ebs_optimized": false,
+                                    "ena_support": true,
+                                    "enclave_options": {
+                                        "enabled": false
+                                    },
+                                    "hibernation_options": {
+                                        "configured": false
+                                    },
+                                    "hypervisor": "xen",
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_id": "i-03a92b61f2de36193",
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_time": "2022-07-22T16:54:09+00:00",
+                                    "maintenance_options": {
+                                        "auto_recovery": "default"
+                                    },
+                                    "metadata_options": {
+                                        "http_endpoint": "enabled",
+                                        "http_protocol_ipv6": "disabled",
+                                        "http_put_response_hop_limit": 1,
+                                        "http_tokens": "optional",
+                                        "instance_metadata_tags": "disabled",
+                                        "state": "pending"
+                                    },
+                                    "monitoring": {
+                                        "state": "disabled"
+                                    },
+                                    "network_interfaces": [
+                                        {
+                                            "attachment": {
+                                                "attach_time": "2022-07-22T16:54:09+00:00",
+                                                "attachment_id": "eni-attach-003a5968062c5208f",
+                                                "delete_on_termination": true,
+                                                "device_index": 0,
+                                                "network_card_index": 0,
+                                                "status": "attaching"
+                                            },
+                                            "description": "",
+                                            "groups": [
+                                                {
+                                                    "group_id": "sg-0ff347a758f3161f0",
+                                                    "group_name": "default"
+                                                }
+                                            ],
+                                            "interface_type": "interface",
+                                            "ipv6_addresses": [],
+                                            "mac_address": "02:75:ad:42:0e:e1",
+                                            "network_interface_id": "eni-0058876b875244679",
+                                            "owner_id": "752401886767",
+                                            "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                            "private_ip_address": "172.31.9.66",
+                                            "private_ip_addresses": [
+                                                {
+                                                    "primary": true,
+                                                    "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                                    "private_ip_address": "172.31.9.66"
+                                                }
+                                            ],
+                                            "source_dest_check": true,
+                                            "status": "in-use",
+                                            "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                            "vpc_id": "vpc-025d17e1899cc0a17"
+                                        }
+                                    ],
+                                    "placement": {
+                                        "availability_zone": "us-east-1a",
+                                        "group_name": "",
+                                        "tenancy": "default"
+                                    },
+                                    "platform_details": "Linux/UNIX",
+                                    "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                    "private_dns_name_options": {
+                                        "enable_resource_name_dns_a_record": false,
+                                        "enable_resource_name_dns_aaaa_record": false,
+                                        "hostname_type": "ip-name"
+                                    },
+                                    "private_ip_address": "172.31.9.66",
+                                    "product_codes": [],
+                                    "public_dns_name": "",
+                                    "root_device_name": "/dev/sda1",
+                                    "root_device_type": "ebs",
+                                    "security_groups": [
+                                        {
+                                            "group_id": "sg-0ff347a758f3161f0",
+                                            "group_name": "default"
+                                        }
+                                    ],
+                                    "source_dest_check": true,
+                                    "state": {
+                                        "code": 0,
+                                        "name": "pending"
+                                    },
+                                    "state_transition_reason": "",
+                                    "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "usage_operation": "RunInstances",
+                                    "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                    "virtualization_type": "hvm",
+                                    "vpc_id": "vpc-025d17e1899cc0a17"
+                                },
+                                {
+                                    "ami_launch_index": 1,
+                                    "architecture": "x86_64",
+                                    "block_device_mappings": [
+                                        {
+                                            "device_name": "/dev/sda1",
+                                            "ebs": {
+                                                "attach_time": "2022-07-22T16:54:10+00:00",
+                                                "delete_on_termination": true,
+                                                "status": "attaching",
+                                                "volume_id": "vol-0da757261c2f08715"
+                                            }
+                                        }
+                                    ],
+                                    "capacity_reservation_specification": {
+                                        "capacity_reservation_preference": "open"
+                                    },
+                                    "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                    "cpu_options": {
+                                        "core_count": 2,
+                                        "threads_per_core": 1
+                                    },
+                                    "ebs_optimized": false,
+                                    "ena_support": true,
+                                    "enclave_options": {
+                                        "enabled": false
+                                    },
+                                    "hibernation_options": {
+                                        "configured": false
+                                    },
+                                    "hypervisor": "xen",
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_id": "i-023e070af3520de99",
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_time": "2022-07-22T16:54:09+00:00",
+                                    "maintenance_options": {
+                                        "auto_recovery": "default"
+                                    },
+                                    "metadata_options": {
+                                        "http_endpoint": "enabled",
+                                        "http_protocol_ipv6": "disabled",
+                                        "http_put_response_hop_limit": 1,
+                                        "http_tokens": "optional",
+                                        "instance_metadata_tags": "disabled",
+                                        "state": "pending"
+                                    },
+                                    "monitoring": {
+                                        "state": "disabled"
+                                    },
+                                    "network_interfaces": [
+                                        {
+                                            "attachment": {
+                                                "attach_time": "2022-07-22T16:54:09+00:00",
+                                                "attachment_id": "eni-attach-0232af8c544f4ccf0",
+                                                "delete_on_termination": true,
+                                                "device_index": 0,
+                                                "network_card_index": 0,
+                                                "status": "attaching"
+                                            },
+                                            "description": "",
+                                            "groups": [
+                                                {
+                                                    "group_id": "sg-0ff347a758f3161f0",
+                                                    "group_name": "default"
+                                                }
+                                            ],
+                                            "interface_type": "interface",
+                                            "ipv6_addresses": [],
+                                            "mac_address": "02:19:49:df:30:13",
+                                            "network_interface_id": "eni-05cc25461e9409780",
+                                            "owner_id": "752401886767",
+                                            "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                            "private_ip_address": "172.31.15.34",
+                                            "private_ip_addresses": [
+                                                {
+                                                    "primary": true,
+                                                    "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                                    "private_ip_address": "172.31.15.34"
+                                                }
+                                            ],
+                                            "source_dest_check": true,
+                                            "status": "in-use",
+                                            "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                            "vpc_id": "vpc-025d17e1899cc0a17"
+                                        }
+                                    ],
+                                    "placement": {
+                                        "availability_zone": "us-east-1a",
+                                        "group_name": "",
+                                        "tenancy": "default"
+                                    },
+                                    "platform_details": "Linux/UNIX",
+                                    "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                    "private_dns_name_options": {
+                                        "enable_resource_name_dns_a_record": false,
+                                        "enable_resource_name_dns_aaaa_record": false,
+                                        "hostname_type": "ip-name"
+                                    },
+                                    "private_ip_address": "172.31.15.34",
+                                    "product_codes": [],
+                                    "public_dns_name": "",
+                                    "root_device_name": "/dev/sda1",
+                                    "root_device_type": "ebs",
+                                    "security_groups": [
+                                        {
+                                            "group_id": "sg-0ff347a758f3161f0",
+                                            "group_name": "default"
+                                        }
+                                    ],
+                                    "source_dest_check": true,
+                                    "state": {
+                                        "code": 0,
+                                        "name": "pending"
+                                    },
+                                    "state_transition_reason": "",
+                                    "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "usage_operation": "RunInstances",
+                                    "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                    "virtualization_type": "hvm",
+                                    "vpc_id": "vpc-025d17e1899cc0a17"
+                                }
+                            ],
+                            "invocation": {
+                                "module_args": {
+                                    "availability_zone": null,
+                                    "aws_access_key": null,
+                                    "aws_ca_bundle": null,
+                                    "aws_config": null,
+                                    "aws_secret_key": null,
+                                    "count": null,
+                                    "cpu_credit_specification": null,
+                                    "cpu_options": null,
+                                    "debug_botocore_endpoint_logs": false,
+                                    "detailed_monitoring": null,
+                                    "ebs_optimized": null,
+                                    "ec2_url": null,
+                                    "exact_count": 5,
+                                    "filters": {
+                                        "image-id": [
+                                            "ami-08d4ac5b634553e16"
+                                        ],
+                                        "instance-state-name": [
+                                            "pending",
+                                            "running",
+                                            "stopping",
+                                            "stopped"
+                                        ],
+                                        "subnet-id": "subnet-0e7831b8ea11e0c14",
+                                        "tag:Name": [
+                                            "ansible"
+                                        ]
+                                    },
+                                    "image": null,
+                                    "image_id": "ami-08d4ac5b634553e16",
+                                    "instance_ids": [],
+                                    "instance_initiated_shutdown_behavior": null,
+                                    "instance_role": null,
+                                    "instance_type": "t2.large",
+                                    "key_name": "sam-ansible",
+                                    "launch_template": null,
+                                    "metadata_options": null,
+                                    "name": null,
+                                    "network": null,
+                                    "placement_group": null,
+                                    "profile": null,
+                                    "purge_tags": false,
+                                    "region": "us-east-1",
+                                    "security_group": null,
+                                    "security_groups": [],
+                                    "security_token": null,
+                                    "state": "present",
+                                    "tags": {
+                                        "Name": "ansible"
+                                    },
+                                    "tenancy": null,
+                                    "termination_protection": null,
+                                    "to_launch": 5,
+                                    "tower_callback": null,
+                                    "user_data": null,
+                                    "validate_certs": true,
+                                    "volumes": null,
+                                    "vpc_subnet_id": null,
+                                    "wait": true,
+                                    "wait_timeout": 600
+                                }
+                            },
+                            "spec": {
+                                "BlockDeviceMappings": [],
+                                "ClientToken": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                "ImageId": "ami-08d4ac5b634553e16",
+                                "InstanceType": "t2.large",
+                                "KeyName": "sam-ansible",
+                                "MaxCount": 5,
+                                "MinCount": 5,
+                                "NetworkInterfaces": [
+                                    {
+                                        "DeviceIndex": 0,
+                                        "SubnetId": "subnet-0e7831b8ea11e0c14"
+                                    }
+                                ],
+                                "TagSpecifications": [
+                                    {
+                                        "ResourceType": "volume",
+                                        "Tags": [
+                                            {
+                                                "Key": "Name",
+                                                "Value": "ansible"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "ResourceType": "instance",
+                                        "Tags": [
+                                            {
+                                                "Key": "Name",
+                                                "Value": "ansible"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2022-07-22T16:54:11.698596Z",
+                            "start": "2022-07-22T16:54:05.925175Z"
+                        },
+                        "id": "367dda89-d9b6-db4e-503a-000000000008",
+                        "name": "Provision instances"
+                    }
+                },
+                {
+                    "hosts": {
+                        "localhost": {
+                            "action": "debug",
+                            "changed": false,
+                            "msg": "All items completed",
+                            "results": [
+                                {
+                                    "_ansible_item_label": {
+                                        "ami_launch_index": 4,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-08111c592048805cd"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-058a69235486e046c",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0eacc267ca29e8a04",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:2c:75:cd:c8:63",
+                                                "network_interface_id": "eni-087c5d251fc22b708",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                                "private_ip_address": "172.31.1.94",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                                        "private_ip_address": "172.31.1.94"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.1.94",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "_ansible_no_log": null,
+                                    "_ansible_verbose_always": true,
+                                    "ansible_loop_var": "item",
+                                    "changed": false,
+                                    "failed": false,
+                                    "item": {
+                                        "ami_launch_index": 4,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-08111c592048805cd"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-058a69235486e046c",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0eacc267ca29e8a04",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:2c:75:cd:c8:63",
+                                                "network_interface_id": "eni-087c5d251fc22b708",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                                "private_ip_address": "172.31.1.94",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                                        "private_ip_address": "172.31.1.94"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-1-94.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.1.94",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "msg": ""
+                                },
+                                {
+                                    "_ansible_item_label": {
+                                        "ami_launch_index": 2,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0b0d5c6c85887368e"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-0a6ae4e55a3f9b98e",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0ec2c69bb7d25f5d5",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:d3:f7:72:cd:35",
+                                                "network_interface_id": "eni-0ff0873301edd0de7",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                                "private_ip_address": "172.31.9.231",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                                        "private_ip_address": "172.31.9.231"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.9.231",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "_ansible_no_log": null,
+                                    "_ansible_verbose_always": true,
+                                    "ansible_loop_var": "item",
+                                    "changed": false,
+                                    "failed": false,
+                                    "item": {
+                                        "ami_launch_index": 2,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0b0d5c6c85887368e"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-0a6ae4e55a3f9b98e",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0ec2c69bb7d25f5d5",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:d3:f7:72:cd:35",
+                                                "network_interface_id": "eni-0ff0873301edd0de7",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                                "private_ip_address": "172.31.9.231",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                                        "private_ip_address": "172.31.9.231"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-9-231.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.9.231",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "msg": ""
+                                },
+                                {
+                                    "_ansible_item_label": {
+                                        "ami_launch_index": 3,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-014f1ac4c06c3ec41"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-0c3285af1a10f1df0",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-007389194cb94f9d6",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:e9:d5:fb:31:01",
+                                                "network_interface_id": "eni-0cd6263d1462f268d",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                                "private_ip_address": "172.31.6.185",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                                        "private_ip_address": "172.31.6.185"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.6.185",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "_ansible_no_log": null,
+                                    "_ansible_verbose_always": true,
+                                    "ansible_loop_var": "item",
+                                    "changed": false,
+                                    "failed": false,
+                                    "item": {
+                                        "ami_launch_index": 3,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-014f1ac4c06c3ec41"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-0c3285af1a10f1df0",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-007389194cb94f9d6",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:e9:d5:fb:31:01",
+                                                "network_interface_id": "eni-0cd6263d1462f268d",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                                "private_ip_address": "172.31.6.185",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                                        "private_ip_address": "172.31.6.185"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-6-185.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.6.185",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "msg": ""
+                                },
+                                {
+                                    "_ansible_item_label": {
+                                        "ami_launch_index": 0,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0c0be146d253802bb"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-03a92b61f2de36193",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-003a5968062c5208f",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:75:ad:42:0e:e1",
+                                                "network_interface_id": "eni-0058876b875244679",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                                "private_ip_address": "172.31.9.66",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                                        "private_ip_address": "172.31.9.66"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.9.66",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "_ansible_no_log": null,
+                                    "_ansible_verbose_always": true,
+                                    "ansible_loop_var": "item",
+                                    "changed": false,
+                                    "failed": false,
+                                    "item": {
+                                        "ami_launch_index": 0,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0c0be146d253802bb"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-03a92b61f2de36193",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-003a5968062c5208f",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:75:ad:42:0e:e1",
+                                                "network_interface_id": "eni-0058876b875244679",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                                "private_ip_address": "172.31.9.66",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                                        "private_ip_address": "172.31.9.66"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-9-66.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.9.66",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "msg": ""
+                                },
+                                {
+                                    "_ansible_item_label": {
+                                        "ami_launch_index": 1,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0da757261c2f08715"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-023e070af3520de99",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0232af8c544f4ccf0",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:19:49:df:30:13",
+                                                "network_interface_id": "eni-05cc25461e9409780",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                                "private_ip_address": "172.31.15.34",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                                        "private_ip_address": "172.31.15.34"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.15.34",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "_ansible_no_log": null,
+                                    "_ansible_verbose_always": true,
+                                    "ansible_loop_var": "item",
+                                    "changed": false,
+                                    "failed": false,
+                                    "item": {
+                                        "ami_launch_index": 1,
+                                        "architecture": "x86_64",
+                                        "block_device_mappings": [
+                                            {
+                                                "device_name": "/dev/sda1",
+                                                "ebs": {
+                                                    "attach_time": "2022-07-22T16:54:10+00:00",
+                                                    "delete_on_termination": true,
+                                                    "status": "attaching",
+                                                    "volume_id": "vol-0da757261c2f08715"
+                                                }
+                                            }
+                                        ],
+                                        "capacity_reservation_specification": {
+                                            "capacity_reservation_preference": "open"
+                                        },
+                                        "client_token": "6bfa8d83f13d4190a9bff8c8421a58bc",
+                                        "cpu_options": {
+                                            "core_count": 2,
+                                            "threads_per_core": 1
+                                        },
+                                        "ebs_optimized": false,
+                                        "ena_support": true,
+                                        "enclave_options": {
+                                            "enabled": false
+                                        },
+                                        "hibernation_options": {
+                                            "configured": false
+                                        },
+                                        "hypervisor": "xen",
+                                        "image_id": "ami-08d4ac5b634553e16",
+                                        "instance_id": "i-023e070af3520de99",
+                                        "instance_type": "t2.large",
+                                        "key_name": "sam-ansible",
+                                        "launch_time": "2022-07-22T16:54:09+00:00",
+                                        "maintenance_options": {
+                                            "auto_recovery": "default"
+                                        },
+                                        "metadata_options": {
+                                            "http_endpoint": "enabled",
+                                            "http_protocol_ipv6": "disabled",
+                                            "http_put_response_hop_limit": 1,
+                                            "http_tokens": "optional",
+                                            "instance_metadata_tags": "disabled",
+                                            "state": "pending"
+                                        },
+                                        "monitoring": {
+                                            "state": "disabled"
+                                        },
+                                        "network_interfaces": [
+                                            {
+                                                "attachment": {
+                                                    "attach_time": "2022-07-22T16:54:09+00:00",
+                                                    "attachment_id": "eni-attach-0232af8c544f4ccf0",
+                                                    "delete_on_termination": true,
+                                                    "device_index": 0,
+                                                    "network_card_index": 0,
+                                                    "status": "attaching"
+                                                },
+                                                "description": "",
+                                                "groups": [
+                                                    {
+                                                        "group_id": "sg-0ff347a758f3161f0",
+                                                        "group_name": "default"
+                                                    }
+                                                ],
+                                                "interface_type": "interface",
+                                                "ipv6_addresses": [],
+                                                "mac_address": "02:19:49:df:30:13",
+                                                "network_interface_id": "eni-05cc25461e9409780",
+                                                "owner_id": "752401886767",
+                                                "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                                "private_ip_address": "172.31.15.34",
+                                                "private_ip_addresses": [
+                                                    {
+                                                        "primary": true,
+                                                        "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                                        "private_ip_address": "172.31.15.34"
+                                                    }
+                                                ],
+                                                "source_dest_check": true,
+                                                "status": "in-use",
+                                                "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                                "vpc_id": "vpc-025d17e1899cc0a17"
+                                            }
+                                        ],
+                                        "placement": {
+                                            "availability_zone": "us-east-1a",
+                                            "group_name": "",
+                                            "tenancy": "default"
+                                        },
+                                        "platform_details": "Linux/UNIX",
+                                        "private_dns_name": "ip-172-31-15-34.ec2.internal",
+                                        "private_dns_name_options": {
+                                            "enable_resource_name_dns_a_record": false,
+                                            "enable_resource_name_dns_aaaa_record": false,
+                                            "hostname_type": "ip-name"
+                                        },
+                                        "private_ip_address": "172.31.15.34",
+                                        "product_codes": [],
+                                        "public_dns_name": "",
+                                        "root_device_name": "/dev/sda1",
+                                        "root_device_type": "ebs",
+                                        "security_groups": [
+                                            {
+                                                "group_id": "sg-0ff347a758f3161f0",
+                                                "group_name": "default"
+                                            }
+                                        ],
+                                        "source_dest_check": true,
+                                        "state": {
+                                            "code": 0,
+                                            "name": "pending"
+                                        },
+                                        "state_transition_reason": "",
+                                        "subnet_id": "subnet-0e7831b8ea11e0c14",
+                                        "tags": {
+                                            "Name": "ansible"
+                                        },
+                                        "usage_operation": "RunInstances",
+                                        "usage_operation_update_time": "2022-07-22T16:54:09+00:00",
+                                        "virtualization_type": "hvm",
+                                        "vpc_id": "vpc-025d17e1899cc0a17"
+                                    },
+                                    "msg": ""
+                                }
+                            ]
+                        }
+                    },
+                    "task": {
+                        "duration": {
+                            "end": "2022-07-22T16:54:11.811260Z",
+                            "start": "2022-07-22T16:54:11.710581Z"
+                        },
+                        "id": "367dda89-d9b6-db4e-503a-000000000009",
+                        "name": "Print ec2 register"
+                    }
+                }
+            ]
+        }
+    ],
+    "stats": {
+        "localhost": {
+            "changed": 1,
+            "failures": 0,
+            "ignored": 0,
+            "ok": 2,
+            "rescued": 0,
+            "skipped": 0,
+            "unreachable": 0
+        }
+    }
+}

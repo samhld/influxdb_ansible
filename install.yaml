@@ -1,0 +1,47 @@
+---
+- name: "Install InfluxDB"
+  hosts: all
+  gather_facts: false
+  remote_user: ubuntu
+
+  tasks:
+    # - name: Copy authorized key
+    #   ansible.posix.authorized_key:
+    #     user: "root"
+    #     state: "present"
+    #     key: "{{ lookup('file', '{{ ~/.ssh/sam-ansible.pem }}') }}"
+    - name: Import InfluxDB GPG signing key
+      become: true
+      apt_key:
+        url: https://repos.influxdata.com/influxdb.key
+        state: present
+
+    - name: Add InfluxDB repository
+      become: true
+      apt_repository:
+        repo: deb https://repos.influxdata.com/ubuntu focal stable
+        state: present
+
+    # - name: Set /var/lib/influxdb permissions for ubuntu user
+    #   become: true
+    #   file:
+    #     path: /var/lib/influxdb
+    #     owner: ubuntu
+    #     mode:
+
+    # - name: Give prop
+
+    - name: "Ensure InfluxDB is installed"
+      become: true
+      package:
+        name: influxdb2
+        state: present
+
+    # - name: "Configure InfluxDB"
+
+    - name: "Run InfluxDB"
+      become: true
+      systemd:
+        name: influxdb
+        state: started
+        enabled: yes
