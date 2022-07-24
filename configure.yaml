@@ -1,0 +1,24 @@
+---
+- name: "Install InfluxDB"
+  hosts: all
+  gather_facts: false
+  remote_user: ubuntu
+  vars_files: defaults.yaml
+
+  tasks:
+    - name: Set config directory
+      become: true
+      file:
+        path: "{{ influxdb_config_path }}"
+        state: directory
+
+    - name: Set configuration
+      become: true
+      template:
+        src: influxdb.conf.j2
+        dest: "{{ influxdb_config_path }}/influxdb.conf"
+        force: yes
+        owner: ubuntu
+        group: ubuntu
+        mode: 0744
+      when: influxdb_template_config

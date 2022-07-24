@@ -1,4 +1,6 @@
+influxdb_template_config: yes
 influxdb_assets_path: ""
+influxdb_config_path: "/etc/influxdb/"
 influxdb_bolt_path: "/Users/samdillard/.influxdbv2/influxd.bolt"
 influxdb_e2e_testing: false
 influxdb_engine_path: "/Users/samdillard/.influxdbv2/engine"

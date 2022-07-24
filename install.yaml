@@ -37,7 +37,7 @@
         name: influxdb2
         state: present
 
-    # - name: "Configure InfluxDB"
+    - name: "Configure"
 
     - name: "Run InfluxDB"
       become: true
