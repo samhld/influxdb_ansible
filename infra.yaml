@@ -1,7 +1,6 @@
 ---
 - name: Create infrastructure
   hosts: localhost
-  # connection: local
   gather_facts: false
 
   tasks:
@@ -22,22 +21,14 @@
     - name: Provision instances
       ec2_instance:
         instance_type: t2.large
-        # image_id: ami-06640050dc3f556bb
         image_id: ami-08d4ac5b634553e16
         key_name: sam-ansible
         security_group: ansible
         region: us-east-1
         wait: true
         exact_count: 5
-        tags:
-          Name: ansible
-      # register: ec2
 
-    # Use aws_ec2inventory plugin to save hosts dynamically
-    # - name: Save hosts
-    #   aws_ec2:
-
-    # - name: Print ec2 register
-    #   debug:
-    #     msg: "{{ item.public_dns_name }}"
-    #   with_items: "{{ ec2.instances }} "
+    - name: Print ec2 register
+      debug:
+        msg: "{{ item.public_dns_name }}"
+      with_items: "{{ ec2.instances }} "

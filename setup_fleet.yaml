@@ -1,0 +1,16 @@
+---
+- name: Setup InfluxDB instances
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - vars.yaml
+
+  tasks:
+    - name: Setup influxdb instance
+      command: |
+        ./main.py --influxdb-host {{ item }} --username {{ influx_username }} --password {{ influx_password }} --organization {{ influx_org }} --bucket {{ influx_bucket }} \
+        --cloud-host {{ influx_remote_host }} --cloud-org {{ influx_remote_org_id }} --cloud-token {{ influx_remote_token }} --cloud-bucket {{ influx_remote_bucket }} \
+        --task-file {{ task_file_path }}
+      with_items: "{{ groups['all'] }}"
+      tags:
+        - setup

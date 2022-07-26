@@ -1,3 +1,6 @@
 hosts
 ansible.cfg
 docker-compose.yaml
+vars.yaml
+tasks.flux
+python-setup-ansible/*

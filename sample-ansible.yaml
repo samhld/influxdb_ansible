@@ -1,0 +1,6 @@
+- name: setup influxdb instance
+  command: |
+    ./main.py --influxdb-host {{ item }} --username {{ username }} --password {{ password }} --organization {{ organization }} --bucket {{ bucket }} \
+    --cloud-host {{ cloud_host }} --cloud-org {{ cloud_org }} --cloud-token {{ cloud_token }} --cloud-bucket {{ cloud_bucket }} \
+    --task-file {{ task_file_path }}
+  with_items: "{{ groups['all'] }}"

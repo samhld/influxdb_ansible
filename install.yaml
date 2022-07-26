@@ -4,12 +4,10 @@
   gather_facts: false
   remote_user: ubuntu
 
+  vars_files:
+    - ./vars.yaml
+
   tasks:
-    # - name: Copy authorized key
-    #   ansible.posix.authorized_key:
-    #     user: "root"
-    #     state: "present"
-    #     key: "{{ lookup('file', '{{ ~/.ssh/sam-ansible.pem }}') }}"
     - name: Import InfluxDB GPG signing key
       become: true
       apt_key:
@@ -27,17 +25,15 @@
     #   file:
     #     path: /var/lib/influxdb
     #     owner: ubuntu
-    #     mode:
+    #     mode: 644
 
     # - name: Give prop
 
     - name: "Ensure InfluxDB is installed"
       become: true
-      package:
+      apt:
         name: influxdb2
         state: present
-
-    - name: "Configure"
 
     - name: "Run InfluxDB"
       become: true
